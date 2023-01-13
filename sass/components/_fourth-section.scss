@@ -1,0 +1,66 @@
+.fourth-section {
+  background-color: $dirty-white;
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__team-member-card {
+    margin: 0;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+  &__heading {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.1875;
+    letter-spacing: 0.03em;
+    color: $almost-black;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__job-description {
+    font-size: 16px;
+    line-height: 1.1875;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  &__team-member-card-bottom {
+    padding: 30px 0;
+  }
+  &__social-media {
+    width: 206px;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    line-height: 0.75;
+  }
+  &__image {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__icon {
+    fill: $delicate-gray;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: $white;
+    background-color: $brand-color;
+  }
+  &__link:focus {
+    outline: none;
+  }
+}

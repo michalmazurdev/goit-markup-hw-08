@@ -1,0 +1,26 @@
+.first-section {
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/background-image.jpg");
+  background-repeat: no-repeat;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 200px 0;
+
+  &__heading {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $white;
+  }
+  &__main-button {
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin: 30px 500px 0;
+  }
+}
