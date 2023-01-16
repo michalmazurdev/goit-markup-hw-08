@@ -5,9 +5,10 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    align-items: center;
+    // align-items: center;
   }
-  &__list li {
+  &__list > li {
+    width: calc(100vw - 30px);
     max-width: 450px;
   }
   &__team-member-card {
@@ -36,11 +37,11 @@
     margin-bottom: 16px;
   }
   &__team-member-card-bottom {
-    padding: 30px 0;
+    padding: 30px 0 24px;
   }
   &__social-media {
     width: 206px;
-    padding: 0 32px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     gap: 10px;
@@ -78,6 +79,11 @@
       gap: 30px;
       flex-direction: row;
     }
+    &__list > li {
+      width: inherit;
+      max-width: none;
+      min-width: none;
+    }
 
     &__team-member-card {
       margin: 0;
@@ -110,6 +116,7 @@
     &__social-media {
       width: 206px;
       padding: 0 32px;
+      margin: 0;
       display: flex;
       justify-content: space-between;
       gap: 10px;
@@ -117,9 +124,6 @@
     }
     &__image {
       display: block;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
     }
     &__icon {
       fill: $delicate-gray;

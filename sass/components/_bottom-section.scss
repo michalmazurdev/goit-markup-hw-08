@@ -1,10 +1,17 @@
 .bottom-section {
   background-color: $dark-background;
-  padding: 60px 0 60px 15px;
+  padding: 60px 0 60px;
 
   &__container {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
+  }
+  &__container div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .logo--bottom {
     color: $white;
@@ -13,7 +20,8 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 9px;
+    gap: 8px;
+    align-items: center;
   }
   &__address-link {
     text-decoration: none;
@@ -42,8 +50,11 @@
     }
   }
   &__social-container {
-    margin-left: 70px;
-    padding-top: 12px;
+    margin-left: 0px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   &__heading {
     font-weight: 700;
@@ -73,13 +84,18 @@
     background-color: $brand-color;
   }
   &__newsletter {
-    margin-left: 78px;
-    padding-top: 12px;
+    margin-left: 0;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   &__newsletter-form {
     margin-top: 20px;
     display: flex;
-    gap: 12px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
   }
   &__newsletter-input {
     padding: 0;
@@ -107,5 +123,128 @@
   &__button-icon {
     width: 24px;
     height: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bottom-section {
+    display: block;
+    background-color: $dark-background;
+    padding: 60px 0 60px 15px;
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    &__container div:nth-child(1) {
+      display: block;
+    }
+    .logo--bottom {
+      color: $white;
+    }
+    &__contacts-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 9px;
+    }
+    &__address-link {
+      text-decoration: none;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 0.03em;
+      color: $white;
+    }
+    &__contact-link:focus,
+    &__social-media-link:focus {
+      outline: none;
+    }
+    &__contact-link {
+      text-decoration: none;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.6);
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        color: $brand-color;
+      }
+    }
+    &__social-container {
+      margin-left: 70px;
+      padding-top: 12px;
+      display: block;
+    }
+    &__heading {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.142;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: $white;
+      vertical-align: baseline;
+    }
+    &__social-media-list {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      width: 206px;
+    }
+    &__social-media-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      fill: $white;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__social-media-link:hover &__social-media-icon,
+    &__social-media-link:focus &__social-media-icon {
+      background-color: $brand-color;
+    }
+    &__newsletter {
+      display: block;
+      margin-left: 78px;
+      padding-top: 12px;
+    }
+    &__newsletter-form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+    }
+    &__newsletter-input {
+      padding: 0;
+      width: 358px;
+      height: 50px;
+      padding-left: 16px;
+      background-color: inherit;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+      border-radius: 4px;
+      color: $white;
+
+      &:focus,
+      &:hover {
+        outline: none;
+        border-color: $brand-color;
+      }
+    }
+    &__main-button {
+      padding: 0 0 0 42px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    &__button-icon {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
