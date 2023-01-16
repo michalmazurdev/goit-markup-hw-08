@@ -19,22 +19,44 @@ ul {
 a {
   cursor: pointer;
 }
+
 .container {
-  width: 1200px;
-  margin: 0 auto;
+  width: 100vw;
 
   &--padding-added {
     padding: 0 15px 0;
   }
 }
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
 }
 .secondary-heading {
-  font-size: 36px;
-  line-height: 1.166;
+  font-size: 28px;
+  line-height: 1.178;
   text-align: center;
   letter-spacing: 0.03em;
   color: $almost-black;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+
+    &--padding-added {
+      padding: 0 15px 0;
+    }
+  }
+  .section {
+    padding: 94px 0;
+  }
+  .secondary-heading {
+    font-size: 36px;
+    line-height: 1.166;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $almost-black;
+    margin-bottom: 50px;
+  }
 }

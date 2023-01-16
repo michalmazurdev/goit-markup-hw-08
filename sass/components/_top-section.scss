@@ -1,18 +1,40 @@
 .top-section {
   background-color: $white;
   border-bottom: 1px solid #ececec;
-  padding: 24px 0 25px 0;
+  padding: 10px 0;
 
   &__container {
-    padding: 0 27px 0 15px;
+    padding: 0 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &__logo-and-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 93px;
+  &__mobile-button {
+    border: none;
+    background-color: inherit;
+    padding: 0;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .top-section {
+    padding: 24px 0 25px 0;
+
+    &__container {
+      padding: 0 27px 0 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__logo-and-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 93px;
+    }
+    &__mobile-button {
+      display: none;
+    }
   }
 }
