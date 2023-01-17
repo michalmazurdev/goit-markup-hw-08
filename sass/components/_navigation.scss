@@ -1,7 +1,51 @@
 .navigation {
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .navigation {
+    // width: 282px;
+    display: block;
 
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      gap: 60px;
+
+      &-item {
+        position: relative;
+      }
+    }
+    &__link {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      color: $almost-black;
+      letter-spacing: 0.02em;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover {
+        color: $brand-color;
+      }
+      &:focus {
+        color: $brand-color;
+        outline: none;
+      }
+    }
+    &__is-active::after {
+      content: "";
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background-color: $brand-color;
+      left: 0;
+      bottom: -34px;
+      border-radius: 2px;
+    }
+    &__is-active &__link {
+      color: $brand-color;
+    }
+  }
+}
 @media screen and (min-width: 1200px) {
   .navigation {
     width: 254px;

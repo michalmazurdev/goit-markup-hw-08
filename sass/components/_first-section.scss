@@ -37,6 +37,31 @@
       url("../images/background-image-mobile@2x.jpg");
   }
 }
+@media screen and (min-width: 768px) {
+  .first-section {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/background-image-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    padding: 118px 0;
+  }
+}
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .first-section {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/background-image-tablet@2x.jpg");
+  }
+}
 
 @media screen and (min-width: 1200px) {
   .first-section {
@@ -51,18 +76,24 @@
     padding: 200px 0;
 
     &__heading {
-      font-weight: 900;
       font-size: 44px;
       line-height: 1.36;
-      text-align: center;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: $white;
     }
     &__main-button {
-      text-align: center;
-      letter-spacing: 0.06em;
       margin: 30px 500px 0;
+    }
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .first-section {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/background-image-desktop@2x.jpg");
     }
   }
 }

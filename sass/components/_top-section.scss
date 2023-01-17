@@ -29,6 +29,26 @@
     }
   }
 }
+@media screen and (min-width: 768px) {
+  .top-section {
+    padding: 21px 0;
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__logo-and-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 83px;
+    }
+    &__mobile-button {
+      display: none;
+    }
+  }
+}
 
 @media screen and (min-width: 1200px) {
   .top-section {
