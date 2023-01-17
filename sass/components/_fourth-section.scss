@@ -1,6 +1,6 @@
 .fourth-section {
   background-color: $dirty-white;
-
+  min-width: 320px;
   &__list {
     display: flex;
     flex-direction: column;
@@ -10,6 +10,7 @@
   &__list > li {
     width: calc(100vw - 30px);
     max-width: 450px;
+    min-width: 290px;
   }
   &__team-member-card {
     margin: 0;

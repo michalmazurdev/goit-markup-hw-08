@@ -1,6 +1,7 @@
 .bottom-section {
   background-color: $dark-background;
   padding: 60px 0;
+  min-width: 320px;
   &__container {
     display: flex;
     flex-direction: column;
