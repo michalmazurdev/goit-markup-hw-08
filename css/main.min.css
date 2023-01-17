@@ -690,6 +690,7 @@ a {
 @media screen and (min-width: 1200px) {
   .third-section {
     margin-top: -94px;
+    display: block;
   }
   .third-section__list {
     display: -webkit-box;
@@ -930,8 +931,7 @@ a {
   }
   .fourth-section__list > li {
     width: inherit;
-    max-width: none;
-    min-width: none;
+    min-width: 270px;
   }
   .fourth-section__team-member-card {
     margin: 0;
@@ -1484,6 +1484,7 @@ a {
   }
   .bottom-section__container {
     padding: 0;
+    padding-left: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

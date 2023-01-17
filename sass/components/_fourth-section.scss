@@ -158,8 +158,7 @@
     }
     &__list > li {
       width: inherit;
-      max-width: none;
-      min-width: none;
+      min-width: 270px;
     }
 
     &__team-member-card {
