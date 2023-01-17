@@ -1502,6 +1502,7 @@ a {
   }
   .bottom-section__container div:nth-child(1) {
     display: block;
+    margin-left: 15px;
   }
   .bottom-section .logo--bottom {
     color: #ffffff;
