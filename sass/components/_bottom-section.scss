@@ -258,7 +258,6 @@
 
     &__container {
       padding: 0;
-      padding-left: 15px;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -338,7 +337,7 @@
     }
     &__newsletter {
       display: block;
-      margin-left: 78px;
+      margin: 0 15px 0 78px;
       padding-top: 12px;
     }
     &__newsletter-form {
