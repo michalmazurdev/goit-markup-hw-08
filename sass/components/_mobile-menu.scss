@@ -8,9 +8,16 @@
   right: 0;
   background-color: $white;
   z-index: -1;
+  opacity: 0;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &.is-open {
     z-index: 1;
+    opacity: 1;
   }
 
   &__closing-button {
@@ -23,20 +30,78 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0;
     background-color: $white;
-    color: $white;
-  }
-  &__closing-button:hover,
-  &__closing-button:focus {
-    color: $brand-color;
-    cursor: pointer;
+    color: black;
 
-    &__closing-button-icon {
+    &:hover,
+    &:focus {
+      color: $brand-color;
+      cursor: pointer;
+    }
+    &-icon {
       width: 44px;
       height: 44px;
       border-radius: 50%;
       fill: currentColor;
     }
+  }
+  &__navigation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  &__navigation-link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    color: $almost-black;
+
+    &:hover,
+    &:focus {
+      color: $brand-color;
+    }
+  }
+  &__phone {
+    font-size: 34px;
+    line-height: 1.176;
+    letter-spacing: 0.02em;
+    color: $brand-color;
+  }
+  &__mail {
+    font-size: 24px;
+    line-height: 1.166;
+    letter-spacing: 0.02em;
+    color: $grey;
+  }
+  &__contacts-and-social {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+  &__social-links li {
+    display: inline;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding: 0 10px;
+
+    &:last-child {
+      border: none;
+      padding-right: 0;
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+  &__social-links a {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $brand-color;
   }
 }
