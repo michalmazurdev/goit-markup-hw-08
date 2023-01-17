@@ -1262,7 +1262,8 @@ a {
 }
 .bottom-section__newsletter-input {
   padding: 0;
-  width: 450px;
+  width: calc(100vw - 30px);
+  max-width: 450px;
   height: 50px;
   padding-left: 16px;
   background-color: inherit;
