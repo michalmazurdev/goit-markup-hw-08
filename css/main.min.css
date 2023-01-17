@@ -103,15 +103,17 @@ a {
   padding: 0;
   height: 40px;
 }
-.top-section__mobile-button > svg {
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .top-section__mobile-button:focus {
   outline: none;
 }
-.top-section__mobile-button:hover > svg, .top-section__mobile-button:focus > svg {
-  fill: #2196f3;
+.top-section__mobile-button:hover, .top-section__mobile-button:focus {
+  color: #2196f3;
+  cursor: pointer;
+}
+.top-section__mobile-button > svg {
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: currentColor;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1261,18 +1263,15 @@ a {
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal__closing-button:hover {
+  cursor: pointer;
+  color: #2196f3;
+}
 .modal__closing-button-icon {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  fill: #ffffff;
-  background-color: rgba(255, 255, 255, 0.1);
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal__closing-button:hover {
-  cursor: pointer;
-  background-color: lightgrey;
+  fill: currentColor;
 }
 .modal__form {
   width: 100%;
@@ -1501,18 +1500,15 @@ a {
     -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+  .modal__closing-button:hover {
+    cursor: pointer;
+    color: #2196f3;
+  }
   .modal__closing-button-icon {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    fill: #ffffff;
-    background-color: rgba(255, 255, 255, 0.1);
-    -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .modal__closing-button:hover {
-    cursor: pointer;
-    background-color: lightgrey;
+    fill: currentColor;
   }
   .modal__form {
     width: 448px;
@@ -1675,4 +1671,48 @@ a {
     margin: auto;
     letter-spacing: 0.06em;
   }
+}
+.mobile-menu {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #ffffff;
+  z-index: -1;
+}
+.mobile-menu.is-open {
+  z-index: 1;
+}
+.mobile-menu__closing-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0;
+  background-color: #ffffff;
+  color: #ffffff;
+}
+.mobile-menu__closing-button:hover, .mobile-menu__closing-button:focus {
+  color: #2196f3;
+  cursor: pointer;
+}
+.mobile-menu__closing-button:hover__closing-button-icon, .mobile-menu__closing-button:focus__closing-button-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: currentColor;
 }/*# sourceMappingURL=main.min.css.map */

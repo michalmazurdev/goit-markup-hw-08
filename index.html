@@ -54,7 +54,12 @@
             +48 111 111 111</a
           >
         </div>
-        <button type="button" class="top-section__mobile-button">        <svg width=40 height=40><use href="./images/icons.svg#hamburger"></use></svg></button>
+        <button type="button" class="top-section__mobile-button js-open-menu">
+          <svg width=40 height=40>
+            <use href="./images/icons.svg#hamburger">
+            </use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -501,9 +506,14 @@
           </div>
           <button class="main-button modal__main-button" type="submit">Wyślij</button>
         </form>
-       
       </div>
     </div>
+    <div class="mobile-menu js-menu-container">        <button type="button" class="mobile-menu__closing-button js-close-menu">
+      <svg class="mobile-menu__closing-button-icon">
+        <use href="./images/icons.svg#icon-close-button"></use>
+      </svg>
+    </button></div>
     <script src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
