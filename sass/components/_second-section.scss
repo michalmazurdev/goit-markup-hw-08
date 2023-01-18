@@ -61,10 +61,10 @@
       gap: 30px;
 
       &-item {
-        width: calc((100% - 60px) / 2);
+        width: 354px;
         display: flex;
-        justify-content: space-between;
         flex-flow: column;
+        align-items: flex-start;
         gap: 10px;
       }
     }
@@ -87,11 +87,11 @@
       height: 70px;
       margin: 25px 100px;
       &-container {
-        width: 270px;
+        width: 354px;
         height: 120px;
         background-color: $dirty-white;
         border-radius: 4px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
     }
   }

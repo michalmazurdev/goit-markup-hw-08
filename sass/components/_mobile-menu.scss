@@ -61,6 +61,9 @@
     &:focus {
       color: $brand-color;
     }
+    &--is-active {
+      color: $brand-color;
+    }
   }
   &__phone {
     font-size: 34px;
